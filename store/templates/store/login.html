@@ -1,0 +1,17 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+	 <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            {% csrf_token %}
+
+            <input type="text" id="loginUsername" name='username' placeholder="Username" required>
+            <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <hr>
+        <p>If you are not registered click here </P><a href="{%url 'register_user'%}">Register<a>
+    </div>
+
+{% endblock content %}
